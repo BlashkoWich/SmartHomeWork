@@ -1,5 +1,4 @@
-﻿using System;
-using _Game.Scripts.Tools.PrefabPool;
+﻿using _Game.Scripts.Tools.PrefabPool;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;
@@ -32,7 +31,6 @@ namespace _Game.Scripts.Games.StartUp
 
             void AddSystems()
             {
-                
             }
 
             void AddInject()
