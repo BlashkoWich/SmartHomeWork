@@ -6,13 +6,14 @@ using _Game.Scripts.Tools.MonoProvider;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using SevenBoldPencil.EasyEvents;
+using UnityEngine;
 
 namespace _Game.Scripts.Games.GamePlay.UI.UserModeSelector.Systems
 {
     public class UserModeSelectorPanelInitSystem : IEcsInitSystem
     {
-        private EcsSharedInject<InSceneObjects> _inSceneObjects = default;
-        private EcsSharedInject<EventsBus> _eventsBus = default;
+        private EcsCustomInject<InSceneObjects> _inSceneObjects = default;
+        private EcsCustomInject<EventsBus> _eventsBus = default;
 
         public void Init(IEcsSystems systems)
         {
@@ -22,6 +23,7 @@ namespace _Game.Scripts.Games.GamePlay.UI.UserModeSelector.Systems
            
             var poolUserModeSelectorPanel = world.GetPool<UserModeSelectorPanelComponent>();
             ref var userModeSelectorPanelComponent = ref poolUserModeSelectorPanel.Add(userModeSelectorPanelEntity);
+            _inSceneObjects.Value.Test();
             userModeSelectorPanelComponent.UserModeSelectorPanel = _inSceneObjects.Value.Get<UserModeSelectorPanel>();
             
             var selectorButtons = userModeSelectorPanelComponent.UserModeSelectorPanel.UserModeSelectorButtons;

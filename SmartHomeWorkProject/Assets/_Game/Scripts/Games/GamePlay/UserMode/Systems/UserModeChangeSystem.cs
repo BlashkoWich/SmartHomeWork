@@ -8,7 +8,7 @@ namespace _Game.Scripts.Games.GamePlay.UserMode.Systems
 {
     public class UserModeChangeSystem : IEcsRunSystem
     {
-        private EcsSharedInject<EventsBus> _eventsBus = default;
+        private EcsCustomInject<EventsBus> _eventsBus = default;
      
         public void Run(IEcsSystems systems)
         {

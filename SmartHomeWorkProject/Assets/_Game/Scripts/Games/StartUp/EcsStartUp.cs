@@ -43,7 +43,8 @@ namespace _Game.Scripts.Games.StartUp
                 _systemsUpdate
                     .Add(new UserModeInitSystem())
                     .Add(new UserModeSelectorPanelInitSystem())
-                    .Add(new UserModeChangeSystem());
+                    .Add(new UserModeChangeSystem())
+                    .Add(new UserModeOnChangedSystem());
             }
 
             void AddInject()

@@ -11,5 +11,10 @@ namespace _Game.Scripts.Tools.MonoProvider
         {
             return monoProviders.OfType<T>().FirstOrDefault();
         }
+
+        public void Test()
+        {
+            
+        }
     }
 }
